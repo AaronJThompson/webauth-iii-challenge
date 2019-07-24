@@ -6,12 +6,19 @@ module.exports = {
     findByUsername,
     findById,
     remove,
-    update
+    update,
+    add
 }
 
 function find() {
     return db('users')
         .select(['id', 'username', 'department']);
+}
+
+function add(username, password) {
+    return db('users')
+        .insert({username, password})
+        .then(ids => ids[0]);
 }
 
 function findByUsername(username) {
