@@ -3,6 +3,11 @@ const UsersDB = require('./users/users-model');
 
 const secret = process.env.JWT_SECRET || "34hg5vjkbhmdfiuv882j345hbb_sd7fg8%$sdjfgn$2CVfsdf&sj*lsdgjmn3@";
 
+module.exports = {
+    generateToken,
+    restricted
+}
+
 function generateToken(user) {
     const payload = {
         sub: user.id,
