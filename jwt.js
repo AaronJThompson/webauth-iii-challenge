@@ -14,7 +14,7 @@ function generateToken(user) {
         username: user.username,
     }
 
-    const opetions = {
+    const options = {
         expiresIn: '20d',
     }
 
@@ -22,7 +22,7 @@ function generateToken(user) {
 }
 
 async function restricted(req, res, next) {
-    const token = req.header.authorization;
+    const token = req.headers.authorization;
     if(token) {
         try {
             const decoded = jwt.verify(token, secret);

@@ -37,7 +37,7 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get('/', restricted, async (req, res) => {
+router.get('/users', restricted, async (req, res) => {
     try {
         const users = await UsersDB.find();
         res.status(200).json(users);
