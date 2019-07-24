@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/AaronJThompson/webauth-iii-challenge#readme",
   "dependencies": {
-    "knex": "^0.19.1"
+    "express": "^4.17.1",
+    "knex": "^0.19.1",
+    "sqlite3": "^4.0.9"
   }
 }
